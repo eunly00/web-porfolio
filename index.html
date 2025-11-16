@@ -1206,7 +1206,31 @@
 	
 	<script>
 		$(document).ready(function(){
-			$('.gallery-carousel').owlCarousel({
+			// 취미 슬라이더
+			$('.hobby-carousel').owlCarousel({
+				loop: true,
+				autoplay: true,
+				autoplayTimeout: 3000,
+				autoplayHoverPause: true,
+				margin: 20,
+				nav: true,
+				dots: true,
+				navText: ["<span class='ion-ios-arrow-back'></span>", "<span class='ion-ios-arrow-forward'></span>"],
+				responsive: {
+					0: {
+						items: 1
+					},
+					600: {
+						items: 2
+					},
+					1000: {
+						items: 3
+					}
+				}
+			});
+			
+			// 프로젝트 슬라이더
+			$('.project-carousel').owlCarousel({
 				loop: true,
 				autoplay: true,
 				autoplayTimeout: 3000,
