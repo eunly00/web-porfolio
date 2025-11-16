@@ -456,30 +456,39 @@
 					</div>
 					<div id="page-4" class="page four">
 						<h2 id="projects-section" class="heading">Projects</h2>
-						<div class="resume-wrap d-flex ftco-animate">
+						<div class="resume-wrap d-flex ftco-animate" style="cursor: pointer;" onclick="window.location.href='project-detail.html?id=1'">
 							<div class="icon d-flex align-items-center justify-content-center">
 								<span class="flaticon-ideas"></span>
 							</div>
 							<div class="text pl-3">
 								<span class="date">2019.09-2020.08</span>
-								<div class="d-flex">
-									<h2>Crop Quality Assessment Using Image Processing and Artificial Intelligence</h2>
-									<div>&nbsp;<a class="btn btn-outline-secondary" target="_blank"
-											class="btn btn-outline-secondary"
-											href="https://github.com/congchu/portfolio-template-2">Github</a>&nbsp;<a
-											class="btn btn-outline-secondary" target="_blank"
-											href="/images/project_1_screenshot.png">스크린샷</a>&nbsp;<a
-											class="btn btn-outline-secondary" target="_blank"
-											href="https://www.wellytravel.com/">Link</a>
+								<div class="d-flex justify-content-between align-items-start">
+									<h2 style="flex: 1; margin-right: 15px;">Crop Quality Assessment Using Image Processing and Artificial Intelligence</h2>
+									<div class="d-flex flex-wrap" style="gap: 8px;" onclick="event.stopPropagation();">
+										<a class="btn btn-outline-primary btn-sm" target="_blank"
+											href="project-detail.html?id=1">
+											상세보기
+										</a>
+										<a class="btn btn-outline-secondary btn-sm" target="_blank"
+											href="https://github.com/andimsewon/Capstone_GuardiansofFarm">
+											GitHub
+										</a>
+										<a class="btn btn-outline-info btn-sm" target="_blank"
+											href="https://andimsewon.github.io/assets/guardians-of-farm-project/poster.pdf">
+											PPT
+										</a>
+										<a class="btn btn-outline-success btn-sm" target="_blank"
+											href="https://youtube.com/watch?v=9YzqQUvIw_4&embeds_referring_euri=https%3A%2F%2Fandimsewon.github.io%2F">
+											시연 영상
+										</a>
 									</div>
 								</div>
-								<span class="position">주식회사 더라피스</span>
-								<div> <b class="text-dark">기술 스택 : </b>React, Typescript, Next.js, Styled-Component,
-									MobX
+								<span class="position">전북대학교 캡스톤 디자인 경진대회</span>
+								<div> <b class="text-dark">기술 스택 : </b>Python, YOLOv8, GroundingDINO, SAM, Computer Vision
 								</div>
-								<div> <b class="text-dark">주요 기능 : </b> 회원 관리 및 SNS 로그인, 상품 리스트 확인, 상품 상세 정보
-									확인, 예약 관리, 결제 </div>
-								<p> React </p>
+								<div> <b class="text-dark">주요 기능 : </b> 식물 질병 자동 감지 시스템, YOLOv8 기반 고성능 객체 탐지, 실시간 작물 품질 평가
+								</div>
+								<p class="mt-2">AI 기반 작물 품질 평가 시스템으로 스마트 팜 환경에서 작물의 질병을 자동으로 감지하고 잎의 건강 상태를 평가합니다.</p>
 							</div>
 						</div>
 						<div class="resume-wrap d-flex ftco-animate">
