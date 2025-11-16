@@ -62,7 +62,7 @@
 						This project developed an AI-based crop quality assessment system designed to detect plant diseases and evaluate leaf health efficiently in smart farming environments. The system successfully transitioned from unsupervised visual grounding models (GroundingDINO + SAM) to a high-performance YOLOv8-based supervised framework.
 					</p>
 					
-					<div class="mt-4 mb-4">
+					<div class="mt-4 mb-4" id="project-pdf-section">
 						<h3 class="mb-3">프로젝트 포스터</h3>
 						<div class="embed-responsive embed-responsive-16by9" style="max-height: 800px;">
 							<iframe id="project-pdf" class="embed-responsive-item" src="" frameborder="0" allowfullscreen></iframe>
@@ -96,68 +96,35 @@
 					<div class="mt-4 mb-4">
 						<h3 class="mb-3">프로젝트 개요</h3>
 						<div id="project-details">
-							<p><strong>2024학년도 2학기 5W 캡스톤디자인 경진대회</strong></p>
-							<p>전북대학교 산학실전캡스톤 프로젝트로, 스마트팜 환경에서 작물의 잎 개수를 정확하게 파악하고, 비정상 잎(질병 및 병충해)을 탐지하기 위한 경량화된 객체 탐지 모델을 개발했습니다.</p>
+							<!-- 동적으로 업데이트됨 -->
 						</div>
 					</div>
 
-					<div class="mt-4 mb-4">
+					<div class="mt-4 mb-4" id="project-motivation-section">
 						<h3 class="mb-3">개발 동기 및 목적</h3>
-						<div>
-							<h4 class="mb-2">개발 동기</h4>
-							<p>도시농업의 급격한 성장과 함께 농업의 접근성과 효율을 높이기 위한 스마트 기술에 대한 필요성이 증가했습니다. IoT 기술과 인공지능을 결합한 스마트 팜 시스템을 구축하고 식물의 생육상태를 효율적으로 판별할 수 있는 AI 기반 품질 판별 시스템 개발이 필요했습니다.</p>
-							
-							<h4 class="mb-2 mt-3">프로젝트 목적</h4>
-							<ul>
-								<li>AI 기술과 이미지 프로세싱을 활용해 식물의 생장 상태와 품질을 정량적으로 판별하여 작물 관리의 효율성을 높이기</li>
-								<li>식물의 생장 정도를 파악하기 위해 잎의 개수 측정</li>
-								<li>식물의 질병 유무를 파악하기 위해 잎의 상태를 보고 질병 유무 파악</li>
-							</ul>
+						<div id="project-motivation">
+							<!-- 동적으로 업데이트됨 -->
 						</div>
 					</div>
 
-					<div class="mt-4 mb-4">
+					<div class="mt-4 mb-4" id="project-process-section">
 						<h3 class="mb-3">개발 과정</h3>
-						<div>
-							<h4 class="mb-2">초기 개발 (1단계)</h4>
-							<ul>
-								<li>GroundingDINO와 SAM 기술을 사용해 텍스트 프롬프트를 기반으로 잎 영역을 탐지</li>
-								<li>탐지된 잎의 평균 RGB값을 산출하여 잎의 정상/비정상 여부 판별</li>
-								<li><strong>문제점:</strong> RGB 분석 방식은 비정상 잎이 정상 잎보다 많은 데이터 불균형에 민감해, 평균 값이 왜곡되어 정상 잎이 비정상 잎으로, 비정상 잎이 정상 잎으로 판별되는 문제 발생</li>
-							</ul>
-
-							<h4 class="mb-2 mt-3">기술 전환 (2단계)</h4>
-							<ul>
-								<li>기존 데이터 외에 웹 크롤링, Kaggle에 있는 open source 데이터를 추가로 수집</li>
-								<li>RoboFlow를 사용해 데이터셋 라벨링 및 증강 (약 60배 이상의 데이터 증량)</li>
-								<li>고속 객체 탐지 모델인 YOLOv8을 이용해 학습 진행</li>
-								<li>학습 환경을 Colab(GPU)과 개인 CPU로 나누어 학습 진행</li>
-								<li>학습된 모델로 잎의 상태를 분석하고 탐지된 박스의 개수를 통해 잎의 개수 판별</li>
-							</ul>
+						<div id="project-process">
+							<!-- 동적으로 업데이트됨 -->
 						</div>
 					</div>
 
-					<div class="mt-4 mb-4">
+					<div class="mt-4 mb-4" id="project-achievements-section">
 						<h3 class="mb-3">주요 성과</h3>
-						<div>
-							<ul>
-								<li><strong>정확도:</strong> 평균 mAP@0.5: 0.810</li>
-								<li><strong>Diseased 클래스 AP:</strong> 0.846</li>
-								<li><strong>Healthy 클래스 AP:</strong> 0.774</li>
-								<li>왼쪽 상단에 정상 잎과 비정상 잎의 개수를 시각적으로 표시</li>
-								<li>오른쪽 상단에 정상 잎과 비정상 잎의 비율을 계산하여 건강상태를 시각적으로 표시 (Normal, Caution, Warning, Danger, Critical)</li>
-								<li>인트초코뿐만 아니라 다른 품종에도 적용 가능하도록 설계</li>
-							</ul>
+						<div id="project-achievements">
+							<!-- 동적으로 업데이트됨 -->
 						</div>
 					</div>
 
-					<div class="mt-4 mb-4">
+					<div class="mt-4 mb-4" id="project-team-section">
 						<h3 class="mb-3">팀 정보</h3>
-						<div>
-							<p><strong>팀명:</strong> Guardians of Farm</p>
-							<p><strong>팀원:</strong> 강경빈(IT정보공학과, 4), 김세원(컴퓨터공학부, 3), 박은송(컴퓨터공학부, 3), 유수현(컴퓨터공학부, 4)</p>
-							<p><strong>지도교수:</strong> 유기형</p>
-							<p><strong>선임체:</strong> 샘스게임즈</p>
+						<div id="project-team">
+							<!-- 동적으로 업데이트됨 -->
 						</div>
 					</div>
 
@@ -243,8 +210,8 @@
 				category: 'AI & COMPUTER VISION',
 				date: '2024.09-2024.12',
 				period: '2024.09-2024.12',
-				organization: '전북대학교 5W 캡스톤디자인 경진대회',
-				role: '개발자 (팀원)',
+				organization: '전북대학교 SW 캡스톤디자인 경진대회',
+				role: '개발자 (팀장)',
 				description: 'This project developed an AI-based crop quality assessment system designed to detect plant diseases and evaluate leaf health efficiently in smart farming environments. The system successfully transitioned from unsupervised visual grounding models (GroundingDINO + SAM) to a high-performance YOLOv8-based supervised framework.',
 				techStack: ['Python', 'YOLOv8', 'GroundingDINO', 'SAM', 'Computer Vision'],
 				features: [
@@ -253,7 +220,12 @@
 					'실시간 작물 품질 평가',
 					'스마트 팜 환경 최적화'
 				],
-				details: '2024학년도 2학기 5W 캡스톤디자인 경진대회 | 전북대학교 산학실전캡스톤',
+				details: '2024학년도 2학기 SW 캡스톤디자인 경진대회 | 전북대학교 산학실전캡스톤',
+				overview: '<p><strong>2024학년도 2학기 SW 캡스톤디자인 경진대회</strong></p><p>전북대학교 산학실전캡스톤 프로젝트로, 스마트팜 환경에서 작물의 잎 개수를 정확하게 파악하고, 비정상 잎(질병 및 병충해)을 탐지하기 위한 경량화된 객체 탐지 모델을 개발했습니다.</p>',
+				motivation: '<h4 class="mb-2">개발 동기</h4><p>도시농업의 급격한 성장과 함께 농업의 접근성과 효율을 높이기 위한 스마트 기술에 대한 필요성이 증가했습니다. IoT 기술과 인공지능을 결합한 스마트 팜 시스템을 구축하고 식물의 생육상태를 효율적으로 판별할 수 있는 AI 기반 품질 판별 시스템 개발이 필요했습니다.</p><h4 class="mb-2 mt-3">프로젝트 목적</h4><ul><li>AI 기술과 이미지 프로세싱을 활용해 식물의 생장 상태와 품질을 정량적으로 판별하여 작물 관리의 효율성을 높이기</li><li>식물의 생장 정도를 파악하기 위해 잎의 개수 측정</li><li>식물의 질병 유무를 파악하기 위해 잎의 상태를 보고 질병 유무 파악</li></ul>',
+				process: '<h4 class="mb-2">초기 개발 (1단계)</h4><ul><li>GroundingDINO와 SAM 기술을 사용해 텍스트 프롬프트를 기반으로 잎 영역을 탐지</li><li>탐지된 잎의 평균 RGB값을 산출하여 잎의 정상/비정상 여부 판별</li><li><strong>문제점:</strong> RGB 분석 방식은 비정상 잎이 정상 잎보다 많은 데이터 불균형에 민감해, 평균 값이 왜곡되어 정상 잎이 비정상 잎으로, 비정상 잎이 정상 잎으로 판별되는 문제 발생</li></ul><h4 class="mb-2 mt-3">기술 전환 (2단계)</h4><ul><li>기존 데이터 외에 웹 크롤링, Kaggle에 있는 open source 데이터를 추가로 수집</li><li>RoboFlow를 사용해 데이터셋 라벨링 및 증강 (약 60배 이상의 데이터 증량)</li><li>고속 객체 탐지 모델인 YOLOv8을 이용해 학습 진행</li><li>학습 환경을 Colab(GPU)과 개인 CPU로 나누어 학습 진행</li><li>학습된 모델로 잎의 상태를 분석하고 탐지된 박스의 개수를 통해 잎의 개수 판별</li></ul>',
+				achievements: '<ul><li><strong>정확도:</strong> 평균 mAP@0.5: 0.810</li><li><strong>Diseased 클래스 AP:</strong> 0.846</li><li><strong>Healthy 클래스 AP:</strong> 0.774</li><li>왼쪽 상단에 정상 잎과 비정상 잎의 개수를 시각적으로 표시</li><li>오른쪽 상단에 정상 잎과 비정상 잎의 비율을 계산하여 건강상태를 시각적으로 표시 (Normal, Caution, Warning, Danger, Critical)</li><li>인트초코뿐만 아니라 다른 품종에도 적용 가능하도록 설계</li></ul>',
+				team: '<p><strong>팀명:</strong> Guardians of Farm</p><p><strong>팀원:</strong> 강경빈(IT정보공학과, 4), 김세원(컴퓨터공학부, 3), 박은송(컴퓨터공학부, 3), 유수현(컴퓨터공학부, 4)</p><p><strong>지도교수:</strong> 유기형</p><p><strong>선임체:</strong> 샘스게임즈</p>',
 				pdfLink: 'images/capstone_poster.pdf',
 				projectLink: 'https://youtube.com/watch?v=9YzqQUvIw_4&embeds_referring_euri=https%3A%2F%2Fandimsewon.github.io%2F',
 				githubLink: 'https://github.com/andimsewon/Capstone_GuardiansofFarm',
@@ -262,12 +234,12 @@
 			'2': {
 				title: 'AI-Based Urban Air Impact Analysis System for Factory and Power Plant Emissions (GAIA Project)',
 				category: 'AI & ENVIRONMENTAL ANALYSIS',
-				date: '2024',
-				period: '2024',
-				organization: 'GAIA Project',
+				date: '2025.01-2025.06',
+				period: '2025.01-2025.06',
+				organization: '전북대학교 SW 캡스톤디자인 경진대회',
 				role: '개발자',
 				description: '공장 및 발전소에서 배출되는 가스의 도시 대기 영향도를 분석하는 AI 기반 시스템입니다. Gaussian Diffusion 모델을 활용하여 배출가스 확산을 시뮬레이션하고 도시 대기질에 미치는 영향을 분석합니다.',
-				techStack: ['Python', 'Gaussian Diffusion', 'Data Analysis', 'Air Quality Modeling'],
+				techStack: ['Python', 'Gaussian Diffusion', 'Data Analysis', 'Air Quality Modeling', 'Machine Learning'],
 				features: [
 					'공장 및 발전소 배출가스 확산 시뮬레이션',
 					'도시 대기 영향 분석',
@@ -275,10 +247,41 @@
 					'Gaussian Diffusion 모델 활용'
 				],
 				details: 'GAIA Project | AI 기반 도시 대기 영향 분석 시스템',
+				overview: '<p><strong>GAIA Project</strong></p><p>공장 및 발전소에서 배출되는 가스의 도시 대기 영향도를 분석하는 AI 기반 시스템입니다. Gaussian Diffusion 모델을 활용하여 배출가스 확산을 시뮬레이션하고 도시 대기질에 미치는 영향을 정량적으로 분석합니다.</p>',
+				motivation: '<h4 class="mb-2">개발 동기</h4><p>산업 시설에서 배출되는 대기 오염물질이 도시 환경과 주민 건강에 미치는 영향을 정확히 파악하고 예측하기 위한 필요성이 증가했습니다. 기존의 정적 모델보다 정확한 예측을 위해 AI 기반 확산 시뮬레이션 시스템 개발이 필요했습니다.</p><h4 class="mb-2 mt-3">프로젝트 목적</h4><ul><li>공장 및 발전소 배출가스의 도시 대기 영향도를 정량적으로 분석</li><li>Gaussian Diffusion 모델을 활용한 배출가스 확산 시뮬레이션 구현</li><li>도시 대기질 예측 및 환경 영향 평가 시스템 구축</li></ul>',
+				process: '<h4 class="mb-2">데이터 수집 및 전처리</h4><ul><li>공장 및 발전소 배출 데이터 수집</li><li>기상 데이터 및 지형 데이터 통합</li><li>도시 대기질 모니터링 데이터 수집 및 전처리</li></ul><h4 class="mb-2 mt-3">모델 개발</h4><ul><li>Gaussian Diffusion 모델을 활용한 배출가스 확산 시뮬레이션 구현</li><li>기상 조건, 지형, 배출량 등을 고려한 확산 모델링</li><li>Python 기반 데이터 분석 및 시각화 파이프라인 개발</li><li>AI 기반 예측 모델 학습 및 검증</li></ul>',
+				achievements: '<ul><li>공장 및 발전소 배출가스의 도시 대기 영향도를 정량적으로 분석 가능</li><li>Gaussian Diffusion 모델을 통한 정확한 확산 시뮬레이션 구현</li><li>다양한 기상 조건과 지형 조건에서의 확산 패턴 분석</li><li>도시 대기질 예측 및 환경 영향 평가 시스템 구축</li></ul>',
+				team: '<p><strong>프로젝트명:</strong> GAIA Project</p><p><strong>역할:</strong> 개발자</p>',
 				pdfLink: 'images/GAIA_Capstone.pdf',
 				projectLink: 'https://youtu.be/s4RKGoAEuJI',
-				githubLink: '#',
+				githubLink: 'https://github.com/GAIAinCapstone',
 				pptLink: 'images/GAIA_Capstone.pdf'
+			},
+			'3': {
+				title: 'JCloud',
+				category: 'CLOUD COMPUTING & INFRASTRUCTURE',
+				date: '2017-현재',
+				period: '2017-현재',
+				organization: '전북대학교 컴퓨터공학부',
+				role: '개발자',
+				description: '다양한 SW교육을 위한 클라우드 서비스로, 학생들에게 학교에서 관리하는 가상머신을 제공하여 어디서나 동일한 실습 환경을 사용할 수 있도록 지원합니다.',
+				techStack: ['OpenStack', 'Cloud Computing', 'Virtualization', 'Linux', 'Infrastructure'],
+				features: [
+					'나만의 가상머신 제공',
+					'동일한 실습 환경',
+					'다양한 실습 지원',
+					'OpenStack 기반 클라우드 인프라'
+				],
+				details: '전북대학교 컴퓨터공학부 | SW교육을 위한 클라우드 서비스',
+				overview: '<p><strong>JCloud</strong></p><p>다양한 SW교육을 위한 클라우드 서비스입니다. 2017년부터 전북대학교 컴퓨터공학부에서 구축·운영 중이며, 매 학기 100개 이상의 가상머신을 학생 개별 제공합니다 (2024년 1학기: 400대+).</p>',
+				motivation: '<h4 class="mb-2">개발 동기</h4><p>SW교육에서 실습 환경의 일관성과 접근성을 높이기 위해 클라우드 기반 교육 인프라가 필요했습니다. 학생들이 어디서나 동일한 환경에서 실습할 수 있도록 하고, 서버가 필요한 모든 실습을 진행할 수 있는 환경을 제공하기 위해 개발되었습니다.</p><h4 class="mb-2 mt-3">프로젝트 목적</h4><ul><li>학교에서 관리하고 어디에서나 접속 가능한 나만의 가상머신 제공</li><li>실습실 어느 자리에서든 동일한 환경과 동일한 파일 사용 가능</li><li>서버가 필요한 모든 실습을 진행할 수 있는 환경 제공</li><li>OpenStack 구축 및 운영 경험 제공</li></ul>',
+				process: '<h4 class="mb-2">시스템 구성</h4><ul><li><strong>인프라:</strong> 9대 서버, 250+ CPU, 3 TB+ 메모리, 30 TB+ SSD, 고성능 GPU</li><li><strong>기반 기술:</strong> OpenStack Antelope 기반 (2023.11월 구축)</li><li><strong>제공 서비스:</strong> 가상머신(인스턴스), 네트워크, 스토리지 서비스</li></ul><h4 class="mb-2 mt-3">주요 기능</h4><ul><li><strong>가상머신 (인스턴스):</strong> 원하는 사양의 VM 생성 가능 (예: 2 vCPUs, 2GB Memory, 20GB SSD), OS: Ubuntu 24.04 등, SSH, VNC, XRDP 등으로 CLI/GUI 접속</li><li><strong>네트워크:</strong> 외부 접속 지원, 공인 IP 및 도메인 할당, VM 간 가상 네트워크 구성, 각 네트워크 및 VM별 보안 설정 가능</li><li><strong>스토리지:</strong> 기본 탑재 스토리지 제공 및 추가 볼륨 지원, 필요 시 초고속 NVMe SSD 사용 가능</li></ul>',
+				achievements: '<ul><li><strong>교육 활용:</strong> 2017년부터 컴퓨터공학부에서 구축·운영 중, 매 학기 100개 이상의 가상머신을 학생 개별 제공 (2024년 1학기: 400대+)</li><li><strong>연구 활용:</strong> GPU를 활용한 인공지능 연구, 전북대병원 블록체인 관련 연구, 약학대학 빅데이터 분석 등 다양한 프로젝트 지원</li><li><strong>인프라 제공:</strong> 가상머신(인스턴스), 네트워크, 스토리지 서비스 제공</li><li>OpenStack Antelope 기반의 안정적인 클라우드 인프라 구축 및 운영</li></ul>',
+				team: '<p><strong>프로젝트명:</strong> JCloud</p><p><strong>기관:</strong> 전북대학교 컴퓨터공학부</p><p><strong>역할:</strong> 개발자</p>',
+				pdfLink: 'images/JEduTools2.pdf',
+				projectLink: 'https://www.youtube.com/watch?v=5YYMlnuHTKc&t=824s',
+				githubLink: 'https://github.com/JBNU-JEduTools',
+				pptLink: 'images/JEduTools2.pdf'
 			}
 		};
 
@@ -292,6 +295,23 @@
 			document.getElementById('project-period').textContent = project.period;
 			document.getElementById('project-organization').textContent = project.organization;
 			document.getElementById('project-role').textContent = project.role;
+			
+			// 프로젝트 상세 정보 업데이트
+			if (project.overview) {
+				document.getElementById('project-details').innerHTML = project.overview;
+			}
+			if (project.motivation) {
+				document.getElementById('project-motivation').innerHTML = project.motivation;
+			}
+			if (project.process) {
+				document.getElementById('project-process').innerHTML = project.process;
+			}
+			if (project.achievements) {
+				document.getElementById('project-achievements').innerHTML = project.achievements;
+			}
+			if (project.team) {
+				document.getElementById('project-team').innerHTML = project.team;
+			}
 			
 			// 기술 스택 업데이트
 			if (project.techStack) {
@@ -317,13 +337,34 @@
 			}
 			
 			// PDF 및 링크 업데이트
+			const pdfSection = document.getElementById('project-pdf-section');
 			if (project.pdfLink) {
 				document.getElementById('project-pdf').src = project.pdfLink + '#view=FitH';
 				document.getElementById('project-pdf-link').href = project.pdfLink;
+				if (pdfSection) pdfSection.style.display = 'block';
+			} else {
+				if (pdfSection) pdfSection.style.display = 'none';
 			}
 			document.getElementById('project-link').href = project.projectLink;
+			// 프로젝트 링크 버튼 텍스트 업데이트
+			const projectLinkBtn = document.getElementById('project-link');
+			if (project.projectLink && (project.projectLink.includes('youtu.be') || project.projectLink.includes('youtube.com'))) {
+				projectLinkBtn.innerHTML = '<i class="icon-play"></i> 시연 영상';
+			} else if (project.projectLink && project.projectLink !== '#') {
+				projectLinkBtn.innerHTML = '<i class="icon-globe"></i> 프로젝트';
+			}
 			document.getElementById('github-link').href = project.githubLink;
-			document.getElementById('ppt-link').href = project.pptLink;
+			if (project.githubLink === '#') {
+				document.getElementById('github-link').style.display = 'none';
+			} else {
+				document.getElementById('github-link').style.display = 'inline-block';
+			}
+			if (project.pptLink) {
+				document.getElementById('ppt-link').href = project.pptLink;
+				document.getElementById('ppt-link').style.display = 'inline-block';
+			} else {
+				document.getElementById('ppt-link').style.display = 'none';
+			}
 		}
 	</script>
 
