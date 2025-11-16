@@ -105,12 +105,10 @@
 					<div class="counter-wrap ftco-animate d-flex mt-md-3">
 						<div class="text">
 							<p class="mb-4">
-								<span class="number" data-number="24">0</span>
+								<span class="number" data-number="48">0</span>
 								<span>Project complete</span>
 							</p>
-							<p><a target="_blank"
-									href="https://drive.google.com/file/d/1uJg0Yun35HWc4YsEKfEX5L6Uyik5MPl_/view?usp=sharing"
-									class="btn btn-primary py-3 px-3">이력서 다운받기</a></p>
+		
 						</div>
 					</div>
 				</div>
@@ -132,7 +130,7 @@
 				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
 					<div class="block-18 shadow">
 						<div class="text">
-							<strong class="number" data-number="100">0</strong>
+							<strong class="number" data-number="48">0</strong>
 							<span>Complete Projects</span>
 						</div>
 					</div>
@@ -140,16 +138,16 @@
 				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
 					<div class="block-18 shadow">
 						<div class="text">
-							<strong class="number" data-number="100">0</strong>
-							<span>Happy Customers</span>
+							<strong class="number" data-number="4">0</strong>
+							<span>실제 배포한 서비스</span>
 						</div>
 					</div>
 				</div>
 				<div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
 					<div class="block-18 shadow">
 						<div class="text">
-							<strong class="number" data-number="50">0</strong>
-							<span>Cups of coffee</span>
+							<strong class="number" data-number="15">0</strong>
+							<span>참여한 대회·캠프</span>
 						</div>
 					</div>
 				</div>
@@ -989,31 +987,53 @@
 			text-decoration: none;
 		}
 		
+		.hobby-carousel,
+		.project-carousel {
+			position: relative;
+		}
+		
 		.gallery-carousel .owl-nav,
 		.hobby-carousel .owl-nav,
 		.project-carousel .owl-nav {
-			text-align: center;
-			margin-top: 20px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			padding: 0 15px;
+			margin: 0;
+			pointer-events: none;
+			z-index: 10;
 		}
 		
 		.gallery-carousel .owl-nav button,
 		.hobby-carousel .owl-nav button,
 		.project-carousel .owl-nav button {
-			width: 40px;
-			height: 40px;
-			background: #007bff;
-			color: white;
-			border: none;
+			width: 45px;
+			height: 45px;
+			background: rgba(255, 255, 255, 0.9);
+			color: #333;
+			border: 1px solid #ddd;
 			border-radius: 50%;
-			margin: 0 10px;
+			margin: 0;
 			font-size: 20px;
-			transition: background 0.3s ease;
+			transition: all 0.3s ease;
+			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+			pointer-events: auto;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
 		
 		.gallery-carousel .owl-nav button:hover,
 		.hobby-carousel .owl-nav button:hover,
 		.project-carousel .owl-nav button:hover {
-			background: #0056b3;
+			background: rgba(255, 255, 255, 1);
+			color: #007bff;
+			border-color: #007bff;
+			box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+			transform: scale(1.1);
 		}
 		
 		.gallery-carousel .owl-dots,
@@ -1098,6 +1118,38 @@
 				font-size: 16px;
 			}
 		}
+		
+		/* Awards 섹션 부드러운 스타일 */
+		#awards-section .resume-wrap .icon {
+			background: #e8e8e8;
+			transition: background 0.3s ease;
+		}
+		
+		#awards-section .resume-wrap .icon span {
+			color: #6c757d;
+		}
+		
+		#awards-section .resume-wrap .date {
+			color: #6c757d;
+			font-weight: 600;
+		}
+		
+		#awards-section .resume-wrap h2 {
+			color: #333;
+			font-weight: 600;
+		}
+		
+		#awards-section .resume-wrap .position {
+			color: #666;
+		}
+		
+		#awards-section .heading {
+			color: #495057;
+		}
+		
+		#awards-section .resume-wrap:hover .icon {
+			background: #d0d0d0;
+		}
 	</style>
 
 	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
@@ -1118,7 +1170,7 @@
 						</div>
 						<div>
 							<h3 class="mb-4">Address</h3>
-							<p>성남시 분당구 정자동</p>
+							<p>전주시 덕진구 세병로 184</p>
 						</div>
 					</div>
 				</div>
@@ -1129,7 +1181,7 @@
 						</div>
 						<div>
 							<h3 class="mb-4">Contact Number</h3>
-							<p><a href="tel://1234567920">+ 010 4277 1234</a></p>
+							<p><a href="tel://1234567920">+ 010 2987 5414</a></p>
 						</div>
 					</div>
 				</div>
@@ -1140,7 +1192,7 @@
 						</div>
 						<div>
 							<h3 class="mb-4">Email Address</h3>
-							<p><a href="mailto:info@yoursite.com">cookie00421@gmail.com</a></p>
+							<p><a href="mailto:info@yoursite.com">songr0821@gmail.com</a></p>
 						</div>
 					</div>
 				</div>
