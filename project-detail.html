@@ -258,6 +258,27 @@
 				projectLink: 'https://youtube.com/watch?v=9YzqQUvIw_4&embeds_referring_euri=https%3A%2F%2Fandimsewon.github.io%2F',
 				githubLink: 'https://github.com/andimsewon/Capstone_GuardiansofFarm',
 				pptLink: 'https://andimsewon.github.io/assets/guardians-of-farm-project/poster.pdf'
+			},
+			'2': {
+				title: 'AI-Based Urban Air Impact Analysis System for Factory and Power Plant Emissions (GAIA Project)',
+				category: 'AI & ENVIRONMENTAL ANALYSIS',
+				date: '2024',
+				period: '2024',
+				organization: 'GAIA Project',
+				role: '개발자',
+				description: '공장 및 발전소에서 배출되는 가스의 도시 대기 영향도를 분석하는 AI 기반 시스템입니다. Gaussian Diffusion 모델을 활용하여 배출가스 확산을 시뮬레이션하고 도시 대기질에 미치는 영향을 분석합니다.',
+				techStack: ['Python', 'Gaussian Diffusion', 'Data Analysis', 'Air Quality Modeling'],
+				features: [
+					'공장 및 발전소 배출가스 확산 시뮬레이션',
+					'도시 대기 영향 분석',
+					'AI 기반 예측 모델',
+					'Gaussian Diffusion 모델 활용'
+				],
+				details: 'GAIA Project | AI 기반 도시 대기 영향 분석 시스템',
+				pdfLink: 'images/GAIA_Capstone.pdf',
+				projectLink: 'https://youtu.be/s4RKGoAEuJI',
+				githubLink: '#',
+				pptLink: 'images/GAIA_Capstone.pdf'
 			}
 		};
 
@@ -271,7 +292,29 @@
 			document.getElementById('project-period').textContent = project.period;
 			document.getElementById('project-organization').textContent = project.organization;
 			document.getElementById('project-role').textContent = project.role;
-			// 프로젝트 디테일은 이미 HTML에 있으므로 업데이트하지 않음
+			
+			// 기술 스택 업데이트
+			if (project.techStack) {
+				const techStackDiv = document.getElementById('project-tech-stack');
+				techStackDiv.innerHTML = '';
+				project.techStack.forEach(tech => {
+					const badge = document.createElement('span');
+					badge.className = 'badge badge-secondary mr-2 mb-2';
+					badge.textContent = tech;
+					techStackDiv.appendChild(badge);
+				});
+			}
+			
+			// 주요 기능 업데이트
+			if (project.features) {
+				const featuresUl = document.getElementById('project-features');
+				featuresUl.innerHTML = '';
+				project.features.forEach(feature => {
+					const li = document.createElement('li');
+					li.textContent = feature;
+					featuresUl.appendChild(li);
+				});
+			}
 			
 			// PDF 및 링크 업데이트
 			if (project.pdfLink) {
