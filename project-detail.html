@@ -72,6 +72,16 @@
 						</p>
 					</div>
 					
+					<div class="mt-4 mb-4" id="project-video-section">
+						<h3 class="mb-3">프로젝트 영상</h3>
+						<div class="embed-responsive embed-responsive-16by9">
+							<video id="project-video" class="embed-responsive-item" controls style="width: 100%; max-height: 600px;">
+								<source id="project-video-source" src="" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						</div>
+					</div>
+					
 					<div class="mt-4 mb-4">
 						<h3 class="mb-3">기술 스택</h3>
 						<div id="project-tech-stack">
@@ -310,6 +320,34 @@
 				projectLink: 'https://colab.research.google.com/drive/1hyeL-FTql9OVyjcqHJx7XTTgc6qPLtjC?usp=sharing',
 				githubLink: 'https://colab.research.google.com/drive/1hyeL-FTql9OVyjcqHJx7XTTgc6qPLtjC?usp=sharing',
 				pptLink: 'images/ai_lecture.pdf'
+			},
+			'5': {
+				title: 'Embedded Voice-Controlled Weather Assistant',
+				category: 'EMBEDDED / IOT / RASPBERRY PI',
+				date: '2024',
+				period: '2024',
+				organization: '개인 프로젝트',
+				role: '개발자',
+				description: '라즈베리파이 기반 음성인식 + 환경센서 + OLED 디스플레이 + LED 경보 + Google TTS를 결합한 스마트 환경 안내 IoT 시스템입니다.',
+				techStack: ['Raspberry Pi', 'Python', 'Google Speech Recognition', 'Google Cloud TTS', 'BMP085', 'SSD1306 OLED', 'GPIO', 'I2C'],
+				features: [
+					'음성 기반 인터랙션 (Google Speech Recognition)',
+					'실시간 외부 데이터 연동 (기상청 RSS, 미세먼지 API, 자외선 지수 API)',
+					'물리 출력 장치 통합 (OLED 디스플레이, LED 경보)',
+					'텍스트-투-스피치(TTS) 완전 자동화',
+					'환경 센서 데이터 수집 (BMP085)'
+				],
+				details: '라즈베리파이 임베디드 음성 기반 스마트 환경 안내 시스템',
+				overview: '<p><strong>Embedded Voice-Controlled Weather Assistant</strong></p><p>본 프로젝트는 라즈베리파이(Raspberry Pi) 기반 음성인식 + 환경센서(BMP085) + OLED 디스플레이 + LED 경보 + Google TTS를 결합해 사용자가 "오늘 날씨"라고 말하면 자동으로 다음을 수행하는 스마트 환경 안내 IoT 시스템입니다.</p><ul><li>음성 명령 인식</li><li>기상청·공공데이터포털 실시간 API 호출</li><li>온도·습도·미세먼지·자외선지수 수집</li><li>실시간 음성 안내(TTS)</li><li>환경 수치 기반 LED 색상 경보</li><li>OLED 디스플레이 출력</li></ul><p>물리 센서 + 음성 인식 + 클라우드 API + 임베디드 UI + TTS가 모두 통합된 프로젝트입니다.</p>',
+				motivation: '<h4 class="mb-2">프로젝트 목적</h4><p>음성 기반 인터페이스 + 실시간 환경 정보 + 임베디드 장치를 결합해 완전 자율형 IoT 스마트 환경 안내 시스템을 구축하고, 실내 센서 데이터와 외부 API 데이터를 결합해 더 정확한 환경 정보를 사용자에게 제공하는 것이 목적입니다.</p><h4 class="mb-2 mt-3">해결하고자 한 문제</h4><ul><li>음성 안내(TTS)까지 통합하여 시각장애인·노년층 등에게도 접근성 높은 서비스 구현</li><li>임베디드 시스템 + 네트워크 API + 음성 기술을 종합적으로 경험</li><li>실내 센서 데이터와 외부 API 데이터를 결합해 더 정확한 환경 정보 제공</li></ul>',
+				process: '<h4 class="mb-2">시스템 동작 구조</h4><h5 class="mb-2 mt-3">① 음성 인식(Input)</h5><ul><li>Google Speech Recognition API 활용</li><li>"오늘 날씨" 명령 감지 시 서비스 시작</li><li>speech_recognition 라이브러리로 마이크 입력 실시간 처리</li></ul><h5 class="mb-2 mt-3">② 실시간 데이터 수집</h5><ul><li><strong>기상청 RSS 날씨 정보 파싱:</strong> 기온, 습도, 날씨 상태(맑음/비/흐림 등)</li><li><strong>공공데이터포털 미세먼지 API:</strong> PM10, PM2.5, 측정소(송천동) 기반 실시간 값 선택</li><li><strong>자외선 지수 API:</strong> 위험 수준 단계별 분류(낮음/보통/높음/매우 높음 등)</li><li><strong>온도·기압 센서 (BMP085):</strong> 라즈베리파이에 장착된 실제 환경 센서 값 사용, 실내 온도 데이터와 실외 데이터 비교 가능</li></ul><h5 class="mb-2 mt-3">③ 상태 기반 LED 시각 경보</h5><p>미세먼지(PM2.5) 값에 따라 LED 색을 자동 변경:</p><ul><li>0–30: 🟢 Green (좋음)</li><li>31–80: 🔵 Blue (보통)</li><li>81–150: 🔴 Red (나쁨)</li><li>151↑: 🔴🟢🔵 All (매우 나쁨)</li></ul><h5 class="mb-2 mt-3">④ OLED 디스플레이 시각 출력</h5><p>128×64 SSD1306 OLED에 다음 정보 출력:</p><ul><li>Temperature</li><li>Humidity</li><li>Fine Dust 상태(GOOD/NORMAL/BAD/VERY BAD)</li><li>UV Index</li></ul><p>Pillow 이미지 처리 기반 1bit 그래픽 렌더링.</p><h5 class="mb-2 mt-3">⑤ Google Cloud TTS를 통한 음성 안내</h5><ul><li>Google Cloud Text-to-Speech API 사용</li><li>자연스러운 한국어 음성 출력</li><li>결과를 MP3로 저장 후 자동 재생</li></ul><p>예시 출력: "현재 송천동의 날씨를 안내해드리겠습니다. 기온은 23도이며 습도는 52%이고, 미세먼지는 보통입니다…"</p>',
+				achievements: '<h4 class="mb-2">핵심 기능</h4><ul><li><strong>음성 기반 인터랙션:</strong> 사용자의 음성으로 기기 동작 제어, 마이크 → STT → 명령 분류 흐름 구성</li><li><strong>실시간 외부 데이터 연동:</strong> 기상청 RSS, 공공데이터포털 미세먼지 API, 자외선 지수 Living Weather API, 센서 데이터(BMP085) 조합</li><li><strong>물리 출력 장치 통합:</strong> OLED 디스플레이 UI 4개 정보 표시, LED 기반 즉각 경보 시스템 구현</li><li><strong>텍스트-투-스피치(TTS) 완전 자동화:</strong> Google Cloud TTS로 음성 합성, 한국어 지원, MP3 자동 저장 및 재생 처리</li><li><strong>예외 처리 및 안정성 고려:</strong> 음성 인식 실패 예외 처리, API 요청 실패 처리, 반복 루프 안정화</li></ul><h4 class="mb-2 mt-3">프로젝트 결과 및 의의</h4><ul><li>음성 기반 인터페이스 + 실시간 환경 정보 + 임베디드 장치를 결합해 완전 자율형 IoT 스마트 환경 안내 시스템을 구축</li><li>실내 센서 데이터와 외부 API 데이터를 결합해 더 정확한 환경 정보를 사용자에게 제공</li><li>음성 안내(TTS)까지 통합하여 시각장애인·노년층 등에게도 접근성 높은 서비스 구현</li><li>임베디드 시스템 + 네트워크 API + 음성 기술을 종합적으로 경험한 프로젝트</li></ul>',
+				team: '<p><strong>프로젝트명:</strong> Embedded Voice-Controlled Weather Assistant</p><p><strong>기간:</strong> 2024</p><p><strong>역할:</strong> 개발자</p><h4 class="mb-2 mt-3">나의 역할</h4><ul><li>라즈베리파이 기반 IoT 시스템 전체 설계</li><li>Google Speech Recognition 기반 음성인식 모듈 구현</li><li>기상청·미세먼지·자외선 API 연동 및 데이터 파싱 로직 구현</li><li>BMP085 센서 값 읽기 및 OLED 디스플레이 UI 구성</li><li>미세먼지 농도 기반 LED 제어 알고리즘 개발</li><li>Google Cloud TTS 연결 및 음성 출력 기능 구현</li><li>오류 처리·예외 처리 등 안정적인 반복 실행 구조 개발</li><li>사용자 메시지 생성 및 음성 안내 시나리오 작성</li></ul>',
+				pdfLink: '',
+				projectLink: '',
+				githubLink: 'https://github.com/eunly00/weather_alarm',
+				pptLink: '',
+				videoLink: 'images/rasberry.mp4'
 			}
 		};
 
@@ -372,6 +410,17 @@
 				if (pdfSection) pdfSection.style.display = 'block';
 			} else {
 				if (pdfSection) pdfSection.style.display = 'none';
+			}
+			
+			// 비디오 업데이트
+			const videoSection = document.getElementById('project-video-section');
+			if (project.videoLink) {
+				document.getElementById('project-video-source').src = project.videoLink;
+				const video = document.getElementById('project-video');
+				video.load(); // 비디오 소스 변경 후 로드
+				if (videoSection) videoSection.style.display = 'block';
+			} else {
+				if (videoSection) videoSection.style.display = 'none';
 			}
 			document.getElementById('project-link').href = project.projectLink;
 			// 프로젝트 링크 버튼 텍스트 업데이트
